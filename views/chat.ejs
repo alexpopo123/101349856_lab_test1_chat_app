@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat Room</title>
+</head>
+<body>
+  <h1>Welcome to <%= room %> chat room</h1>
+  <div id="chat-container">
+    <% messages.forEach(function(message) { %>
+      <p><%= message.from_user %>: <%= message.message %></p>
+    <% }); %>
+  </div>
+  <form action="/chat" method="post">
+    <div>
+      <textarea id="message" name="message"></textarea>
+    </div>
+    <button type="submit">Send</button>
+  </form>
+  <script>
+    
+  </script>
+</body>
+</html>
